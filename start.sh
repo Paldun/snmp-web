@@ -25,7 +25,7 @@ fi
 service snmpd start
 
 # Apache napló figyelése, hogy a konténer ne álljon le
-tail -F /var/log/apache2/access.log
+# tail -F /var/log/apache2/access.log
 
 #start shell
 cd
