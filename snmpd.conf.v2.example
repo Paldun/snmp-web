@@ -1,0 +1,14 @@
+# SNMPv2c közösségi alapú hozzáférés
+# A "public" a közösségi sztring, amelyet az SNMP menedzser használ olvasási hozzáféréshez
+rocommunity public  default    -V systemonly
+
+# Írási hozzáférés (rwcommunity)
+# A "private" a közösségi sztring, amelyet az SNMP menedzser használ írási hozzáféréshez
+rwcommunity private  localhost
+
+# A rendszerről szóló alapértelmezett információk
+sysLocation    Server Room
+sysContact     Admin <admin@example.com>
+
+# Engedélyezd az SNMP szerver válaszolását minden interfészen
+agentAddress udp:161

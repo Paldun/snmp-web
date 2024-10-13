@@ -1,0 +1,14 @@
+# SNMPv3 felhasználó hozzáadása a rendszerhez (priv és auth)
+# Használj erős jelszót mind az auth, mind a priv részhez
+createUser snmpv3user MD5 snmpv3password DES snmpv3privpassword
+
+# SNMPv3 hozzáférési szabályok
+# Engedélyezi az snmpv3user felhasználónak az olvasást és írást, hitelesítést és titkosítást igényel
+rouser snmpv3user priv
+
+# Rendszer információk
+sysLocation    Secure Data Center
+sysContact     Security Admin <securityadmin@example.com>
+
+# Agent válaszadási cím
+agentAddress udp:161
