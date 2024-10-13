@@ -28,5 +28,4 @@ service snmpd start
 tail -F /var/log/apache2/access.log
 
 #start shell
-cd
 exec bash -i
