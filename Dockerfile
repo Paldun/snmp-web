@@ -9,16 +9,16 @@ RUN apt-get update && \
     apt-get install -y snmpd snmp cacti apache2 libapache2-mod-php php php-mysql mariadb-server rrdtool apache2-utils && \
     apt-get clean
 
-# SNMPd konfiguráció
-COPY snmpd.conf.v2.example /etc/snmp/snmpd.conf.v2.example
-COPY snmpd.conf.v3.example /etc/snmp/snmpd.conf.v3.example
+#configok hozzadasa
+ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/snmpd.conf.v2.example /etc/snmp/snmpd.conf.v2.example
+ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/snmpd.conf.v3.example /etc/snmp/snmpd.conf.v3.example
+ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/start.sh /sbin/start.sh
 
-# Indítási szkript hozzáadása
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
+
+#Start skript add
+RUN chmod 755 /sbin/start.sh
 
 # Portok nyitása
 EXPOSE 80 161
 
-# A konténer indításakor futtatandó szkript
-CMD ["/start.sh"]
+CMD [ "sh", "-c", "/sbin/start.sh" ]
