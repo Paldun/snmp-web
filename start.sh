@@ -5,7 +5,7 @@ service mysql start
 service apache2 start
 
 # Várunk, amíg a MySQL teljesen elindul
-sleep 10
+# sleep 10
 
 # Cacti adatbázis és felhasználó létrehozása, ha még nem léteznek
 if [ ! -d "/var/lib/mysql/cacti" ]; then
