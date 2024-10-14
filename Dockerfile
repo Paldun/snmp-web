@@ -13,6 +13,7 @@ RUN apt-get update && \
 ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/snmpd.conf.v2.example /etc/snmp/snmpd.conf.v2.example
 ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/snmpd.conf.v3.example /etc/snmp/snmpd.conf.v3.example
 ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/start.sh /sbin/start.sh
+ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/debian.conf /etc/cacti/debian.conf
 
 
 #Start skript add
