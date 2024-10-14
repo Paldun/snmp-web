@@ -43,10 +43,10 @@
  */
 
 $database_type = 'mysql';
-$database_default = 'cacti';  // Az adatbázis neve
-$database_hostname = 'localhost';  // Az adatbázis szerver host neve
-$database_username = 'cactiuser';  // Az adatbázishoz használt felhasználónév
-$database_password = 'cactipass';  // A jelszó az adatbázishoz
+$database_default = 'cacti';
+$database_hostname = 'localhost';
+$database_username = 'cactiuser';
+$database_password = 'cactipass';
 $database_port     = '3306';
 $database_retries  = 5;
 $database_ssl      = false;
