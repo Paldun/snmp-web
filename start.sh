@@ -16,7 +16,7 @@ echo "DON'T SHUT DOWN THE PC!!"
 echo "The mysql needs rly mutch time to boot up!"
 
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
-
+ 
 # Cacti adatbázis és felhasználó létrehozása, ha még nem léteznek
 if [ ! -d "/var/lib/mysql/cacti" ]; then
     mysql -e "CREATE DATABASE cacti;"
