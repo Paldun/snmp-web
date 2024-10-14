@@ -23,6 +23,7 @@ ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/php-conf/a
 #Start skript add
 RUN chmod 755 /sbin/start.sh
 RUN chmod 755 /etc/cacti/debian.php
+RUN chown -R www-data:www-data /usr/share/cacti/
 
 # Portok nyitása
 EXPOSE 80 161
