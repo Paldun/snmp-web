@@ -12,6 +12,7 @@ if [ ! -d "/var/lib/mysql/cacti" ]; then
     mysql -e "CREATE DATABASE cacti;"
     mysql -e "CREATE USER 'cactiuser'@'localhost' IDENTIFIED BY 'cactipass';"
     mysql -e "GRANT ALL PRIVILEGES ON cacti.* TO 'cactiuser'@'localhost';"
+    mysql -e "GRANT SELECT ON mysql.time_zone_name TO 'cactiuser'@'localhost';"
     mysql -e "FLUSH PRIVILEGES;"
     mysql -e "USE cacti; SOURCE /usr/share/doc/cacti/cacti.sql;"
 fi
