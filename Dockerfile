@@ -18,7 +18,6 @@ ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/debian.php
 
 ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/mysql-conf/my.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/php-conf/apache2-php.ini /etc/php/7.4/apache2/php.ini
-ADD https://raw.githubusercontent.com/Paldun/snmp-web/refs/heads/main/php-conf/cli-php.ini /etc/php/7.4/cli/php.ini
 
 
 #Start skript add
